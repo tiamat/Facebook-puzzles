@@ -27,11 +27,11 @@ def usage():
 
 try:
 	# getting options
-	options, arguments = getopt.getopt(sys.argv[1:], "f:")
-	if len(options) == 1:
-		hoppityLoc = options[0][1]
+	options, arguments = getopt.getopt(sys.argv[1:], '')
+	if len(arguments) == 1:
+		hoppityLoc = arguments[0]
 	else:
-		print "ERROR: No option provided. Hoppity needs options"
+		print "ERROR: Wrong amount of arguments provided. "
 		usage()
 		sys.exit(2)
 
