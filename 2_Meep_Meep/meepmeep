@@ -1,0 +1,22 @@
+#!/usr/bin/python2.7
+import getopt, sys
+
+# Outputs the usage
+def usage():
+	print 'Usage: meepmeep <file_name>'
+	return
+
+try:
+	# getting options
+	options, arguments = getopt.getopt(sys.argv[1:], '')
+	if len(arguments) == 1:
+		print "Meep meep!"
+	else:
+		print "ERROR: wrong amount of arguments provided. Meepmeep wants 1 argument"
+		usage()
+		sys.exit(2)
+
+except getopt.GetoptError, err:
+	print "Something is wrong with your arguments"
+	usage()
+	sys.exit(2)
